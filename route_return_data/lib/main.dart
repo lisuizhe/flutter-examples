@@ -43,7 +43,6 @@ class SelectionButton extends StatelessWidget {
       ..showSnackBar(SnackBar(content: Text('$result')));
   }
 }
-
 class SelectionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -59,18 +58,22 @@ class SelectionScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 onPressed: () {
+                  // Close the screen and return "Yep!" as the result.
                   Navigator.pop(context, 'Yep!');
                 },
+                child: Text('Yep!'),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 onPressed: () {
+                  // Close the screen and return "Nope!" as the result.
                   Navigator.pop(context, 'Nope.');
                 },
+                child: Text('Nope.'),
               ),
-            ),
+            )
           ],
         ),
       ),
